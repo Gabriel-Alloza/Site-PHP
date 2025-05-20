@@ -12,6 +12,6 @@
              <?php echo $navbar; ?>
         </header>
 
-        <h1><?php echo $Texte_entête; ?></h1>
+        <h1><?php echo $texte_entete; ?></h1>
 
         
