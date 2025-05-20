@@ -7,11 +7,20 @@
     <body>
 
 
+        <div class = "container">
+            <div class = "row">
+                <div class="col-sm-12">
+                    <header>
+                        <?php echo $navbar; ?>
+                    </header>
+                </div>
+            </div>
 
-        <header>
-             <?php echo $navbar; ?>
-        </header>
-
-        <h1><?php echo $texte_entete; ?></h1>
+            <div class = "row">
+                <div class = "col-sm-12">
+                    <h1><?php echo $texte_entete; ?></h1>
+                </div>
+            </div>
+        </div>
 
         
