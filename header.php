@@ -5,8 +5,13 @@
     </head>
 
     <body>
+
+
+
         <header>
-             <h1>
+             <?php echo $navbar; ?>
         </header>
+
+        <h1><?php echo $Texte_entête; ?></h1>
 
         
