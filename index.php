@@ -1,6 +1,6 @@
 <?php
     $titre = "Accueil";
-    $navbar = "<p>Accueil</p><a href = 'gallerie.php'>Gallerie</a><a href = 'contact.php'>Contact</a>";
+    $navbar = "<p>Accueil<a href = 'gallerie.php'>Gallerie</a><a href = 'contact.php'>Contact</a></p>";
     $texte_entete = "Bonjour et bienvenue sur mon site!";
     include 'header.php';
 ?>
