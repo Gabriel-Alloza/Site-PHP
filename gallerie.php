@@ -4,3 +4,5 @@
     $texte_entete = "Bienvenue dans la gallerie!";
     include 'header.php';
 ?>
+
+<?php include 'footer.php'; ?>
