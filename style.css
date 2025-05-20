@@ -1,0 +1,25 @@
+
+
+footer{
+  position: fixed;
+  bottom: 0;
+  background: #ff6b61;
+  width: 2000px;
+  height: 200px;
+}  
+
+body{
+  background: papayawhip;
+}
+
+main{
+  margin-bottom: 200px;
+  width: 1500px;
+}
+
+header{
+  background: #ff6b61;
+  width: 2000px;
+  height: 100px;
+  font-size: x-large;
+}
