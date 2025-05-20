@@ -1,3 +1,5 @@
+</main>
+
 <footer>
     <p>Ce site a été fait par Gabriel Alloza</p>
 </footer>
