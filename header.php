@@ -8,24 +8,12 @@
     </head>
 
     <body>
+        <header>
+            <?php echo $navbar; ?>
+        </header>
 
+        <main>
+            <h1><?php echo $texte_entete; ?></h1>
 
-        <div class = "container">
-            <div class = "row">
-                <div class="col-sm-12">
-                    <header>
-                        <?php echo $navbar; ?>
-                    </header>
-                </div>
-            </div>
-
-            <main>
-
-                <div class = "row">
-                    <div class = "col-sm-12">
-                        <h1><?php echo $texte_entete; ?></h1>
-                    </div>
-                </div>
-            </div>
 
         
