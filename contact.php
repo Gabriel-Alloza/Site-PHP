@@ -5,7 +5,7 @@
     include 'header.php';
 ?>
 
-<form action = "contact.php" mehod = "post">
+<form action = "contact.php" method = "post">
     <select>
         <option>Homme</option>
         <option>Femme</option>
@@ -23,15 +23,15 @@
     <br>
     Raison du contact: 
     <br>
-    <input type = "radio" name = "raison_contact">
+    <input type = "radio" name = "raison_contact" value = "A">
     <label>A</label>
     <br>
     <br>
-    <input type = "radio" name = "raison_contact">
+    <input type = "radio" name = "raison_contact" value = "B">
     <label>B</label>
     <br>
     <br>
-    <input type = "radio" name = "raison_contact">
+    <input type = "radio" name = "raison_contact" value = "C">
     <label>C</label>
     <br>
     <br>
