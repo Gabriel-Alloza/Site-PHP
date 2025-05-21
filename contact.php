@@ -5,7 +5,7 @@
     include 'header.php';
 ?>
 
-<form>
+<form action = "/contact.php">
     <select>
         <option>Homme</option>
         <option>Femme</option>
@@ -21,7 +21,9 @@
     email: <input type = "text">
     <br>
     <br>
-    Raison du contact: <input type = "radio">
+    Raison du contact: 
+    <br>
+    <input type = "radio">
     <label>A</label>
     <br>
     <br>
@@ -34,6 +36,7 @@
     <br>
     <br>
     Message: <textarea></textarea>
+
 
 </form>
 
