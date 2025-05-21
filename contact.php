@@ -44,7 +44,13 @@
 </form>
 
 <?php
-    echo $_POST["message"];
+    $nb_char = strlen($_POST['message']);
+    if($nb_char>=5){
+        echo $_POST['message'];
+    }
+    else{
+        echo "Message invalide";
+    }
  ?>
 
 
