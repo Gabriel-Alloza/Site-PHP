@@ -49,7 +49,7 @@
         echo $_POST['message'];
     }
     else{
-        echo "Message invalide";
+        echo "Message invalide<br>";
     }
 
     $email = $_POST["email"];
@@ -57,7 +57,15 @@
         echo $email;
     }
     else{
-        echo "mail invalide";
+        echo "mail invalide<br>";
+    }
+
+    $reason = $_POST["raison_contact"];
+    if(isset($reason)){
+        echo $reason;
+    }
+    else{
+        echo "Veuillez choisir une raison <br>";
     }
 
  ?>
