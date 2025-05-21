@@ -36,6 +36,9 @@
     <br>
     <br>
     Message: <textarea></textarea>
+    <br>
+    <br>
+    <input type = "submit" value = "Envoyer">
 
 
 </form>
