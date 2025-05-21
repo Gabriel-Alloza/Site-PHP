@@ -44,40 +44,44 @@
 </form>
 
 <?php
-    $nb_char = strlen($_POST['message']);
-    if($nb_char>=5){
-        echo $_POST['message'];
-    }
-    else{
+
+    $is_valid = true;
+
+    $message = $_POST['message'];
+    $nb_char = strlen($message);
+    if($nb_char<5){
         echo "Message invalide<br>";
+        $is_valid = false;
     }
+    
 
     $email = $_POST["email"];
-    if(filter_var($email, FILTER_VALIDATE_EMAIL)){
-        echo $email;
-    }
-    else{
+    if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
         echo "mail invalide<br>";
+        $is_valid = false;
     }
+    
 
     $reason = $_POST["raison_contact"];
-    if(isset($reason)){
-        echo $reason;
-    }
-    else{
+    if(!isset($reason)){
         echo "Veuillez choisir une raison <br>";
+        $is_valid = false;
     }
+    
 
     $nom = $_POST["nom"];
     $prenom = $_POST["prénom"];
 
-    if(isset($nom) && isset($prenom)){
-        echo $nom;
-        echo $prenom;
-    }
-    else{
+    if(empty($nom) || empty($prenom)){
         echo "Veuillez entrer votre nom et prénom";
+        $is_valid = false;
     }
+
+    if($is_valid === true){
+        $results = "Nom: $nom\nPrénom: $prenom\n E-mail: $email\n Raison: $reason\n Message: $message";
+        file_put_contents("resultats.txt", $results);
+    }
+
     
 
 
