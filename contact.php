@@ -68,6 +68,19 @@
         echo "Veuillez choisir une raison <br>";
     }
 
+    $nom = $_POST["nom"];
+    $prenom = $_POST["prénom"];
+
+    if(isset($nom) && isset($prenom)){
+        echo $nom;
+        echo $prenom;
+    }
+    else{
+        echo "Veuillez entrer votre nom et prénom";
+    }
+    
+
+
  ?>
 
 
