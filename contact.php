@@ -99,6 +99,7 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
 </form>
 
 <?php
+if($_SERVER["REQUEST_METHOD"]==="POST"){
 
     if($valid_msg == false){
         echo "Message invalide<br>";
@@ -121,6 +122,7 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
     if($valid_nom_prenom){
         echo "Veuillez entrer votre nom et prénom";
     }
+}
 
 
  ?>
