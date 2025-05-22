@@ -16,7 +16,6 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
         $message = $_POST['message'];
         $nb_char = strlen($message);
         if($nb_char<5){
-            echo "Message invalide<br>";
             $is_valid = false;
             $valid_msg = false;
 
@@ -25,7 +24,6 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
 
         $email = $_POST["email"];
         if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-            echo "mail invalide<br>";
             $is_valid = false;
             $valid_mail = false;
         }
@@ -33,7 +31,6 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
 
         $reason = $_POST["raison_contact"];
         if(!isset($reason)){
-            echo "Veuillez choisir une raison <br>";
             $is_valid = false;
             $valid_reason = false;
         }
@@ -43,7 +40,6 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
         $prenom = $_POST["prénom"];
 
         if(empty($nom) || empty($prenom)){
-            echo "Veuillez entrer votre nom et prénom";
             $is_valid = false;
             $valid_nom_prenom = false;
         }
@@ -52,7 +48,6 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
             $results = "Nom: $nom\nPrénom: $prenom\n E-mail: $email\n Raison: $reason\n Message: $message";
             file_put_contents("resultats.txt", $results);
             session_unset();
-            echo "validé";
         }
 
     }
@@ -105,7 +100,7 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
 
 <?php
 
-    if($valid_msg == false;){
+    if($valid_msg == false){
         echo "Message invalide<br>";
     }
         
