@@ -6,6 +6,7 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
         $valid_mail = true;
         $valid_reason = true;
         $valid_nom_prenom = true;
+        $method_post = true;
 
         $_SESSION['nom'] = $_POST["nom"] ?? '';
         $_SESSION['prénom'] = $_POST["prénom"] ?? '';
@@ -71,9 +72,17 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
     <br>
     <br>
     Prénom: <input type = "text" name = "prénom" value = "<?php echo $_SESSION['prénom'] ?? ''; ?>">
+    <?php if(!$valid_nom_prenom && $method_post){
+        echo "<br>Veuillez entrer votre nom et prénom";
+    }
+    ?>
     <br>
     <br>
     email: <input type = "text" name = "email" value = "<?php echo $_SESSION['email'] ?? ''; ?>">
+    <?php   if(!$valid_mail && $method_post){
+        echo "<br>mail invalide<br>";
+    }
+    ?>
     <br>
     <br>
     Raison du contact: 
@@ -88,44 +97,22 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
     <br>
     <input type = "radio" name = "raison_contact" value = "C" <?php if (($_SESSION['raison_contact'] ?? '') == 'C') echo 'checked'; ?>>
     <label>C</label>
+    <?php if(!$valid_reason && $method_post){
+        echo "<br>Veuillez choisir une raison <br>";
+    }
+    ?>
     <br>
     <br>
     Message: <textarea name = "message"><?php echo $_SESSION['message'] ?? ''; ?></textarea>
+    <?php if(!$valid_msg && $method_post){
+        echo "<br>Message invalide<br>";
+    }
+    ?>
     <br>
     <br>
     <input type = "submit" value = "Envoyer">
 
 
 </form>
-
-<?php
-if($_SERVER["REQUEST_METHOD"]==="POST"){
-
-    if(!$valid_msg){
-        echo "Message invalide<br>";
-    }
-        
-
-       
-    if(!$valid_mail){
-        echo "mail invalide<br>";
-    }
-        
-
-        
-    if(!$valid_reason){
-        echo "Veuillez choisir une raison <br>";
-    }
-        
-
-     
-    if(!$valid_nom_prenom){
-        echo "Veuillez entrer votre nom et prénom";
-    }
-}
-
-
- ?>
-
 
 <?php include 'footer.php'; ?>
