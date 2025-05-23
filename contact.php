@@ -101,25 +101,25 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
 <?php
 if($_SERVER["REQUEST_METHOD"]==="POST"){
 
-    if($valid_msg == false){
+    if(!$valid_msg){
         echo "Message invalide<br>";
     }
         
 
        
-    if($valid_mail == false){
+    if(!$valid_mail){
         echo "mail invalide<br>";
     }
         
 
         
-    if($valid_reason == false){
+    if(!$valid_reason){
         echo "Veuillez choisir une raison <br>";
     }
         
 
      
-    if($valid_nom_prenom){
+    if(!$valid_nom_prenom){
         echo "Veuillez entrer votre nom et prénom";
     }
 }
