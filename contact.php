@@ -45,7 +45,7 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
             $valid_nom_prenom = false;
         }
 
-        if($is_valid === true){
+        if($is_valid){
             $results = "Nom: $nom\nPrénom: $prenom\n E-mail: $email\n Raison: $reason\n Message: $message";
             file_put_contents("resultats.txt", $results);
             session_unset();
